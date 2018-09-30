@@ -3,18 +3,16 @@ default xkb_types "local" {
 
     include "complete"
 
-     virtual_modifiers Super;
-
     type "VIRTUALPLANCK" {
-        modifiers = Shift+LevelThree+LevelFive+Super;
+        modifiers = Shift+LevelThree+LevelFive+Mod2;
         map[None] = Level1;
         map[Shift] = Level2;
         map[LevelThree] = Level3;
         map[Shift+LevelThree] = Level4;
         map[LevelFive] = Level5;
         map[Shift+LevelFive] = Level6;
-        map[Super] = Level7;
-        map[Shift+Super] = Level8;
+        map[Mod2] = Level7;
+        map[Shift+Mod2] = Level8;
         level_name[Level1] = "Base";
         level_name[Level2] = "Shift";
         level_name[Level3] = "Alt Base";

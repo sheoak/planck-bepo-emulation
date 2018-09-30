@@ -4,6 +4,11 @@ xkb_symbols "local" {
     //key.type[Group1] = "EIGHT_LEVEL";
     key.type[Group1] = "VIRTUALPLANCK";
 
+
+    // move shift to caps
+    // move control to shift
+    // move shift to enter (ç on macbook)
+
     // move w to à and à to AltGr + w
     key <AB01> { [ w, W, agrave, Agrave ] }; // w W ̆à À
 
@@ -36,7 +41,8 @@ xkb_symbols "local" {
       type[Group1]="ONE_LEVEL",
       symbols[Group1] = [ Super_L ]
     };
-    modifier_map Mod4 { <LWIN> };
+    // TODO: make mod4 works…
+    modifier_map Mod2 { Super_L };
 
     // transform left Super as Left alt
     //key <LWIN> {

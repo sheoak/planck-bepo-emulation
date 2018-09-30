@@ -1,0 +1,51 @@
+xkb_symbols "local" {
+
+    name[Group1]= "Custom bepo";
+    //key.type[Group1] = "EIGHT_LEVEL";
+    key.type[Group1] = "VIRTUALPLANCK";
+
+    // move w to à and à to AltGr + w
+    key <AB01> { [ w, W, agrave, Agrave ] }; // w W ̆à À
+
+    // move ç to altGr + k
+    key <AB05> { [ k, K, ccedilla, Ccedilla ] }; // k K ç Ç
+
+    // create AltGr on w
+    key <AD12> {
+      type[Group1]="ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    //modifier_map Mod5 { <RALT> };
+
+    // transform AltGr into Level5
+    key <RALT> {
+      type[Group1]="ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    modifier_map Mod3 { <RALT> };
+
+    // transform left Alt as level 6
+    //key <LALT> {
+    //  type[Group1]="ONE_LEVEL",
+    //  symbols[Group1] = [ Super_L ]
+    //  //virtualMods= Level7
+    //};
+
+    //for the test we keep left alt in place and use l win as lower mod
+    key <LWIN> {
+      type[Group1]="ONE_LEVEL",
+      symbols[Group1] = [ Super_L ]
+    };
+    modifier_map Mod4 { <LWIN> };
+
+    // transform left Super as Left alt
+    //key <LWIN> {
+    //  type[Group1]="ONE_LEVEL",
+    //  symbols[Group1] = [ Alt_L ]
+    //  //virtualMods= Level7
+    //};
+    //modifier_map Mod1 { <LWIN> };
+
+    key <AD01> { [  b,  B,  bar, brokenbar, x, X, r, R] }; // b B | ¦
+
+};
